@@ -17,6 +17,21 @@
 
 ## Credits
 
+Shout out to the teachings of each team at EdX and the fellow students for the help and collaboration.
+
+The group members and project responsibilities:
+
+Reece Corkhill: ...
+
+Bhatti Abdullah: ...
+
+Jbane Khumbulani: ...
+
+Sridhar Aniruddha: ...
+
+Frank Lapa: ...
+  
+
 ## License
 
 MIT License
