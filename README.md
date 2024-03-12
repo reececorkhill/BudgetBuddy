@@ -15,6 +15,8 @@
 
 ## Link to Site
 
+This site can be accessed on GitPages [HERE]()
+
 ## Credits
 
 Shout out to the teachings of each team at EdX and the fellow students for the help and collaboration.
