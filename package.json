@@ -7,8 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint budgetbuddy --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+<<<<<<< HEAD
     "preview": "vite preview"
+=======
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+>>>>>>> 2e767c11bdbd539ace5010966fb997702764a293
   },
+  "homepage": "https://reececorkhill.github.io/budgetbuddy",
   "dependencies": {
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
@@ -23,6 +29,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
     "vite": "^4.4.5"
   }
 }
