@@ -1,9 +1,9 @@
-import React from 'React'
+import React from 'react'
 
 export const Header = () => {
-  return (
-    <h2>
-      Budget Buddy
-    </h2>
-  )
+    return (
+        <h2>
+            Budget Buddy
+        </h2>
+    )
 }

@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Message from './components/Message.jsx';
 import {Header} from './components/Header.js';
-import { Globalprovider } from './context/Globalstate';
+import{GlobalProvider} from './context/GlobalState'
 
 function App() {
   const [count, setCount] = useState(0)
