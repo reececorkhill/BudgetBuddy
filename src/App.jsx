@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Message from './components/Message.jsx';
+import {Header} from './components/Header.js';
+import { Globalprovider } from './context/Globalstate';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,11 +20,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-<<<<<<< HEAD
-        <Message />
-=======
       <Message />
->>>>>>> 2e767c11bdbd539ace5010966fb997702764a293
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
