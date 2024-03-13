@@ -10,9 +10,9 @@
 ## Description
 
 
-Working within our group, will collaborate and again conceive and execute a design that solves a real-world problem. In creating your first collaborative front-end, single-page application, you’ll create a React front end to build a user-focused platform. We will continue to build on the agile development methodologies that have been executed throughout this course. 
+Working within our group, we will collaborate and again conceive and execute a design that solves a real-world problem. In creating the first collaborative front-end, single-page application, our main onjective is to create a React front end app in order to build a user-focused platform. We will continue to build on the agile development methodologies so that we are well informed throughout this course. 
 
-For this project we will build an expense tracker known as Budget Buddy. This application is very beneficial towards society and undisciplined spenders across World. Managing personal finances is essential for maintaining a healthy financial life. One effective way to achieve this is by keeping track of expenses and keep you well informed of any upcoming expenses and also help minimise stress and look foward to a better and brighter future.
+For this project we will build an expense tracker known as Budget Buddy. This application is very beneficial towards society and undisciplined spenders across World. Managing personal finances is essential for maintaining a healthy financial life. One effective way to achieve this is by keeping track of expenses and thus keeping you well informed of any upcoming expenses and to also help minimise stress. So that we can look foward to a better and brighter future for the ones we care for and nurture.
 
 ## Installation
 
