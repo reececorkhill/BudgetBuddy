@@ -7,8 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint budgetbuddy --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+<<<<<<< HEAD
+    "preview": "vite preview"
+=======
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
+>>>>>>> 2e767c11bdbd539ace5010966fb997702764a293
   },
   "homepage": "https://reececorkhill.github.io/budgetbuddy",
   "dependencies": {

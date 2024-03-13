@@ -7,7 +7,8 @@
 * [Credits](#credits)
 * [License](#license)
 
-  ## Description
+## Description
+
 
 Working within our group, will collaborate and again conceive and execute a design that solves a real-world problem. In creating your first collaborative front-end, single-page application, you’ll create a React front end to build a user-focused platform. We will continue to build on the agile development methodologies that have been executed throughout this course. 
 
