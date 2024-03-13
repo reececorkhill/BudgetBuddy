@@ -27,15 +27,19 @@ Shout out to the teachings of each team at EdX and the fellow students for the h
 
 The group members and project responsibilities:
 
-Reece Corkhill: ...
+Reece Corkhill: Build AddTransaction.jsx Component (Priority), also store locally. Build Transactions.jsx component. 
 
-Abdullah Bhatti: ...
+Abdullah Bhatti: Balance.jsx component, Recharts, Victory, other options https://blog.logrocket.com/top-8-react-chart-libraries/#recharts  
 
-Jubane Khumbulani: ...
+Jubane Khumbulani: Readme.md, Header.js component, GlobalState.js component, AppReducer.js in the context folder 
 
-Sridhar Aniruddha: ...
+Sridhar Aniruddha: Income.jsx component,  CSS and include React-Bootstrap, Create presentation template 
 
-Frank Lapa: ...
+Frank Lapa: Deployment of app, Unit test cases, and include library Jest Enzyme or Cypress.
+
+Deployment of app 
+
+Unit test cases, and include library Jest Enzyme or Cypress 
   
 
 ## License
