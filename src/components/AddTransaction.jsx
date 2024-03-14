@@ -1,38 +1,49 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+
 
 const AddTransaction = () => {
 
-    const [transactionName, setTransactionName] = useState(''); // Initial state of Transaction Name (Empty String)
-    const [transactionAmount, setTransactionAmount] = useState(0); // Initial state of Transaction Amount (Number 0)
+    // Initial state of the Type dropdown button.
+    const [transactionType, setTransactionType] = useState("Type")
+
+    // Initial state of the Category dropdown button.
+    const [transactionCategory, setTransactionCategory] = useState("Category") 
+
+    // Initial state of Transaction Name (Empty String).
+    const [transactionName, setTransactionName] = useState("");
+
+    // Initial state of Transaction Amount (Number 0).
+    const [transactionAmount, setTransactionAmount] = useState(0);
 
     return (
     <>
         <div>
-            <h1>Add Income</h1> 
-            <div className="input-group mb-3">
-                <span className="input-group-text">Enter Amount </span>
-                <input type="text" className="form-control" placeholder="0.00" />
-                <select className="form-select">
-                    <option defaultValue>Select Category</option>
-                    <option value="1">Salary</option>
-                    <option value="2">Bonus</option>
-                    <option value="3">Refund</option>
-                    <option value="4">Cheque</option>
-                </select>
-            </div>
-        </div>
-        <div>
-            <h1>Add Bill</h1> 
-            <div className="input-group mb-3">
-                <span className="input-group-text">Enter Amount </span>
-                <input type="text" className="form-control" placeholder="-0.00" />
-                <select className="form-select">
-                    <option defaultValue>Select Category</option>
-                    <option value="1">Saving</option>
-                    <option value="2">Food</option>
-                    <option value="3">Debt</option>
-                    <option value="4">Holiday</option>
-                </select>
+            <InputGroup>
+                <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
+                    <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionType("Expense")}>Expense</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Expense". */}
+                </DropdownButton>
+                <Form.Control placeholder="Enter Amount" />
+                <DropdownButton variant="outline-secondary" title={transactionCategory} id="input-group-dropdown-4" align="end">
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Salary")}>Salary</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Salary". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Bonus")}>Bonus</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Bonus". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Refund")}>Refund</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Refund". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Cheque")}>Cheque</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Cheque". */}
+                    <Dropdown.Divider />
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Saving")}>Saving</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Saving". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Food")}>Food</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Food". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Debt")}>Debt</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Debt". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Holiday")}>Holiday</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Holiday". */}
+                    <Dropdown.Item href="#" onClick={() => setTransactionCategory("Other")}>Other</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Other". */}
+                </DropdownButton>
+            </InputGroup>
+            <div className="d-grid gap-2">
+                <Button variant="primary" size="lg">Add Transaction</Button> {/* Button will have onClick event handler which will call a function to save to localstorage. */}
             </div>
         </div>
     </> 
