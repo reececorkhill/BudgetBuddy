@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-
 # React Commands Quick Guide
 
-This guide provides a quick overview and essential commands for managing and running React projects.
+This guide provides a quick overview and essential commands for 
+managing and running React projects.
 
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-=======
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
->>>>>>> 2e767c11bdbd539ace5010966fb997702764a293
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-<<<<<<< HEAD
 
 
 ## Run in dev
@@ -47,5 +36,4 @@ This command will remove the single build dependency from your project and copy 
 ---
 
 This guide covers the basics to get you started with React projects. For more detailed information, refer to the [official React documentation](https://reactjs.org/docs/getting-started.html).
-=======
->>>>>>> 2e767c11bdbd539ace5010966fb997702764a293
+
