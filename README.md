@@ -7,7 +7,12 @@
 * [Credits](#credits)
 * [License](#license)
 
-  ## Description
+## Description
+
+
+Working within our group, we will collaborate and again conceive and execute a design that solves a real-world problem. In creating the first collaborative front-end, single-page application, our main onjective is to create a React front end app in order to build a user-focused platform. We will continue to build on the agile development methodologies so that we are well informed throughout this course. 
+
+For this project we will build an expense tracker known as Budget Buddy. This application is very beneficial towards society and undisciplined spenders across World. Managing personal finances is essential for maintaining a healthy financial life. One effective way to achieve this is by keeping track of expenses and thus keeping you well informed of any upcoming expenses and to also help minimise stress. So that we can look foward to a better and brighter future for the ones we care for and nurture.
 
 ## Installation
 
@@ -23,15 +28,19 @@ Shout out to the teachings of each team at EdX and the fellow students for the h
 
 The group members and project responsibilities:
 
-Reece Corkhill: ...
+Reece Corkhill: Build AddTransaction.jsx Component (Priority), also store locally. Build Transactions.jsx component. 
 
-Abdullah Bhatti: ...
+Abdullah Bhatti: Balance.jsx component, Recharts, Victory, other options https://blog.logrocket.com/top-8-react-chart-libraries/#recharts  
 
-Jubane Khumbulani: ...
+Jubane Khumbulani: Readme.md, Header.js component, GlobalState.js component, AppReducer.js in the context folder 
 
-Sridhar Aniruddha: ...
+Sridhar Aniruddha: Income.jsx component,  CSS and include React-Bootstrap, Create presentation template 
 
-Frank Lapa: ...
+Frank Lapa: Deployment of app, Unit test cases, and include library Jest Enzyme or Cypress.
+
+Deployment of app 
+
+Unit test cases, and include library Jest Enzyme or Cypress 
   
 
 ## License
