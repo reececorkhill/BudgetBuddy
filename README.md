@@ -18,6 +18,8 @@ For this project we will build an expense tracker known as Budget Buddy. This ap
 
 ## Usage
 
+Budget Buddy is An expense tracker app which allows you to monitor and categorize your expenses across different bank and investment accounts and credit cards. The web application also offers unique features such as budgeting tools, credit monitoring, mileage tracking, receipt keeping, and advice to grow your net worth.
+
 ## Link to Site
 
 This site can be accessed on GitPages [HERE]()
