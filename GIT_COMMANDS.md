@@ -1,3 +1,77 @@
+# Git commands
+
+Usefull list of commands in Git
+
+## Resolve conflics
+
+### Bring all changes from remote to local
+Before to do any merge, check if there is any change in remote, by running next command
+```
+git fetch origin
+```
+
+### Switch to your soure branch
+For example if I want to integrate my changes from **development** to **main**, first I need to 
+select development by running next command
+```
+git checkout development
+```
+
+### Save your changes before merge
+Now add all your local changes and push in your branch
+```
+git add .
+git commit -m "Some message about what your changes are for"
+git push
+```
+
+### merge your loca with remote branch
+This action is secure, what you will do is merge your local branch with remote branch but in your laptop
+so, there is not issue you can create to break anything in remote, the commands for that are
+
+```
+git merge origin/main
+```
+
+### Conflicts
+If you are changing some files that other people have change, you will see in your code mark as red those files
+but also you will see strange symbols, example
+
+index.js
+```
+...
+
+var b = "example";
+<<<=============================================
+var a = "some value";
+================================================
+var a = "other value";
+================================================>>>>
+
+...
+```
+what you need to tdo there is, choose the value you want and delete the other, in our case we will delet the line 
+of "other value" so our file index.js will be
+
+```
+...
+
+var b = "example";
+var a = "some value";
+
+...
+```
+
+### Save conflicts fixed
+now just add another commit and push in your branch
+```
+git add .
+git commit -m "Confict fixed in index.js"
+git push
+```
+whenever the team will merge your branch will not be any conflict
+
+
 ## Multiple Git accounts
 
 ### How to configure multiple git or bitbucket accounts
