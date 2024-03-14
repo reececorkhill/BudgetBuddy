@@ -9,7 +9,6 @@
     "lint": "eslint budgetbuddy --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "homepage": "https://reececorkhill.github.io/budgetbuddy",
   "dependencies": {
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
