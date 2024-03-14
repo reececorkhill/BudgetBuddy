@@ -9,11 +9,11 @@ const AddTransaction = () => {
     <>
         <div>
             <h1>Add Income</h1> 
-            <div class="input-group mb-3">
-                <span class="input-group-text">Enter Amount </span>
-                <input type="text" class="form-control" placeholder="0.00" />
-                <select class="form-select">
-                    <option selected>Select Category</option>
+            <div className="input-group mb-3">
+                <span className="input-group-text">Enter Amount </span>
+                <input type="text" className="form-control" placeholder="0.00" />
+                <select className="form-select">
+                    <option defaultValue>Select Category</option>
                     <option value="1">Salary</option>
                     <option value="2">Bonus</option>
                     <option value="3">Refund</option>
@@ -23,11 +23,11 @@ const AddTransaction = () => {
         </div>
         <div>
             <h1>Add Bill</h1> 
-            <div class="input-group mb-3">
-                <span class="input-group-text">Enter Amount </span>
-                <input type="text" class="form-control" placeholder="-0.00" />
-                <select class="form-select">
-                    <option selected>Select Category</option>
+            <div className="input-group mb-3">
+                <span className="input-group-text">Enter Amount </span>
+                <input type="text" className="form-control" placeholder="-0.00" />
+                <select className="form-select">
+                    <option defaultValue>Select Category</option>
                     <option value="1">Saving</option>
                     <option value="2">Food</option>
                     <option value="3">Debt</option>
