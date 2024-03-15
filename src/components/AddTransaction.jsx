@@ -24,10 +24,6 @@ const AddTransaction = () => {
     const handleTransactionChange = (e) => {
         setTransactionAmount(e.target.value)
     }
-
-    // console.log(transactionType)
-    // console.log(transactionAmount)
-    // console.log(transactionCategory)
     
     return (
         <>
@@ -37,7 +33,7 @@ const AddTransaction = () => {
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Expense")}>Expense</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Expense". */}
                     </DropdownButton>
-                    <Form.Control placeholder={transactionAmount} onChange={handleTransactionChange}/>
+                    <Form.Control placeholder={transactionAmount} onChange={handleTransactionChange} type="number"/>
                     <DropdownButton variant="outline-secondary" title={transactionCategory} id="input-group-dropdown-4" align="end">
                         <Dropdown.Item href="#" onClick={() => setTransactionCategory("Salary")}>Salary</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Salary". */}
                         <Dropdown.Item href="#" onClick={() => setTransactionCategory("Bonus")}>Bonus</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Bonus". */}
