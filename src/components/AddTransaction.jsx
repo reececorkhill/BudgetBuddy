@@ -14,8 +14,8 @@ const AddTransaction = () => {
     // Initial state of the Category dropdown button.
     const [transactionCategory, setTransactionCategory] = useState("Category") 
 
-    // Initial state of Transaction Name (Empty String).
-    const [transactionName, setTransactionName] = useState("");
+    // Initial state of Transaction Name (Empty String) - this may not be needed...
+    // const [transactionName, setTransactionName] = useState("");
 
     // Initial state of Transaction Amount (Number 0).
     const [transactionAmount, setTransactionAmount] = useState("Enter Amount");
@@ -25,6 +25,13 @@ const AddTransaction = () => {
         setTransactionAmount(e.target.value)
     }
     
+    // Function which will handle the Add Transaction button click.
+    const addTransaction = () => {
+        console.log(transactionType) // To be replaced with localstorage - setItem.
+        console.log(transactionAmount) // To be replaced with localstorage - setItem.
+        console.log(transactionCategory) // To be replaced with localstorage - setItem.
+    }
+
     return (
         <>
             <div>
@@ -48,7 +55,7 @@ const AddTransaction = () => {
                     </DropdownButton>
                 </InputGroup>
                 <div className="d-grid gap-2">
-                    <Button variant="primary" size="lg">Add Transaction</Button> {/* Button will have onClick event handler which will call a function to save to localstorage. */}
+                    <Button variant="primary" size="lg" onClick={addTransaction}>Add Transaction</Button> {/* Button will have onClick event handler which will call a function to save to localstorage. */}
                 </div>
             </div>
         </> 
