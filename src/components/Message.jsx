@@ -2,7 +2,7 @@ import React from 'react';
 
 class Message extends React.Component {
     render() {
-        return <h2>Welcome to BudgetBuddy</h2>;
+        return <h2 data-testid="cypress-message">Welcome to BudgetBuddy</h2>;
     }
 }
 

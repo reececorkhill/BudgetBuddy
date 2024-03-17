@@ -8,15 +8,15 @@ function App() {
 
   return (
     <>
-      <div className="welcome-section">
+      <div className="welcome-section" data-testid="cypress-welcome-section">
         <Message /> {/* This is the welcome message. */}
       </div>
 
-      <div className="transactions-section">
+      <div className="transactions-section" data-testid="cypress-transactions-section">
         <Transactions /> {/* This component displays list of added transactions. */}
       </div>
 
-      <div className="add-transaction-section">
+      <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
         <AddTransaction /> {/*This component allows the user to add a transaction. */}
       </div>
     </>
