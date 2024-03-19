@@ -16,7 +16,7 @@ function App() {
       <div className="Interface-section">
         <Interface />
       </div>
-
+      <div className="transactions-section" data-testid="cypress-transactions-section"></div>
       <div className="welcome-section">
         <Message /> {/* This is the welcome message. */}
       </div>
