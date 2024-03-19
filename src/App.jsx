@@ -21,11 +21,11 @@ function App() {
         <Message /> {/* This is the welcome message. */}
       </div>
 
-      <div className="transactions-section">
+      <div className="transactions-section" data-testid="cypress-transaction-section">
         <Transactions /> {/* This component displays list of added transactions. */}
       </div>
 
-      <div className="add-transaction-section">
+      <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
         <AddTransaction /> {/*This component allows the user to add a transaction. */}
       </div>
     </>
