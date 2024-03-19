@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, theme } from 'antd';
-import { EuroCircleOutlined, UserAddOutlined, PlusCircleOutlined } from '@ant-design/icons';
+import { PoundCircleOutlined, UserAddOutlined, PlusCircleOutlined } from '@ant-design/icons';
 
 import { FloatButton, Switch } from 'antd';
 
@@ -26,7 +25,7 @@ const App = () => {
             >
                 <FloatButton />
                 <FloatButton icon={<UserAddOutlined />} />
-                <FloatButton icon={<EuroCircleOutlined />} />
+                <FloatButton icon={<PoundCircleOutlined />} />
             </FloatButton.Group>
             <Switch
                 onChange={onChange}
