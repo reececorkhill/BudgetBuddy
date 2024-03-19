@@ -5,6 +5,7 @@ import AddTransaction from './components/AddTransaction.jsx';
 import Transactions from './components/Transactions.jsx';
 import Interface from './components/Interface.jsx';
 import Balance from './components/Balance.jsx';
+import Income from './components/Income.jsx';
 import Expenses from './components/Expenses.jsx';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       </div>
 
       <Balance />
+      <Income />
       <Expenses />
 
       <div className="transactions-section" data-testid="cypress-transaction-section">
