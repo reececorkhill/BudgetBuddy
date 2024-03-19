@@ -11,13 +11,12 @@ function App() {
 
   return (
     <>
-      <div className="welcome-section" data-testid="cypress-welcome-section">
-      </div>
-      <div className="Interface-section">
+
+      <div className="Interface-section" data-testid="cypress-interface-section">
         <Interface />
       </div>
-      <div className="transactions-section" data-testid="cypress-transactions-section"></div>
-      <div className="welcome-section">
+
+      <div className="welcome-section" data-testid="cypress-welcome-section">
         <Message /> {/* This is the welcome message. */}
       </div>
 
