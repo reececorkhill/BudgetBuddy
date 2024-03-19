@@ -4,7 +4,7 @@ import Message from './components/Message.jsx';
 import AddTransaction from './components/AddTransaction.jsx';
 import Transactions from './components/Transactions.jsx';
 import Interface from './components/Interface.jsx';
-
+import Balance from './components/Balance.jsx';
 
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
       <div className="welcome-section" data-testid="cypress-welcome-section">
         <Message /> {/* This is the welcome message. */}
       </div>
+
+      <Balance />
 
       <div className="transactions-section" data-testid="cypress-transaction-section">
         <Transactions /> {/* This component displays list of added transactions. */}

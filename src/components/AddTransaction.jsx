@@ -25,10 +25,6 @@ const AddTransaction = () => {
         setTransactionAmount(e.target.value)
     }
 
-    // console.log(transactionType)
-    // console.log(transactionCategory)
-    // console.log(transactionAmount)
-
     const transactionObject = {
         type: transactionType,
         category: transactionCategory,
@@ -39,10 +35,7 @@ const AddTransaction = () => {
     const addTransaction = () => {
         let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || [];
     
-        console.log(savedTransactions)
-
         localStorage.setItem('transactionObject', JSON.stringify([...savedTransactions, transactionObject]));
-        
     }
 
     return (
