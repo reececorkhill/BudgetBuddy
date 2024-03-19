@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Button } from 'antd';
-import { CommentOutlined, CustomerServiceOutlined, PlusCircleFilled, } from '@ant-design/icons';
+import { EuroCircleOutlined, UserAddOutlined, FormOutlined, PlusCircleOutlined } from '@ant-design/icons';
 
 import { FloatButton, Switch } from 'antd';
 
@@ -78,10 +78,11 @@ const App = () => {
         style={{
           right: 24,
         }}
-        icon={<CustomerServiceOutlined />}
+        icon={<PlusCircleOutlined />}
       >
         <FloatButton />
-        <FloatButton icon={<CommentOutlined />} />
+        <FloatButton icon={<UserAddOutlined />} />
+        <FloatButton icon={<EuroCircleOutlined />} />
       </FloatButton.Group>
       <Switch
         onChange={onChange}
