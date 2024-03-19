@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -24,12 +24,25 @@ const AddTransaction = () => {
     const handleTransactionChange = (e) => {
         setTransactionAmount(e.target.value)
     }
+
+    // console.log(transactionType)
+    // console.log(transactionCategory)
+    // console.log(transactionAmount)
+
+    const transactionObject = {
+        type: transactionType,
+        category: transactionCategory,
+        amount: transactionAmount
+    };
     
     // Function which will handle the Add Transaction button click.
     const addTransaction = () => {
-        console.log(transactionType) // To be replaced with localstorage - setItem.
-        console.log(transactionAmount) // To be replaced with localstorage - setItem.
-        console.log(transactionCategory) // To be replaced with localstorage - setItem.
+        let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || [];
+    
+        console.log(savedTransactions)
+
+        localStorage.setItem('transactionObject', JSON.stringify([...savedTransactions, transactionObject]));
+        
     }
 
     return (
