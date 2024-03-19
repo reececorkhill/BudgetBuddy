@@ -11,7 +11,8 @@ function App() {
 
   return (
     <>
-
+      <div className="welcome-section" data-testid="cypress-welcome-section">
+      </div>
       <div className="Interface-section">
         <Interface />
       </div>
