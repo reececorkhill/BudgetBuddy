@@ -4,14 +4,14 @@
   width:45rem;
 }
 
-.ant-layout-content {
+/* .ant-layout-content {
   display: flex;
   width:45rem;
   flex-direction: column;
   justify-content: center;
   margin: 24px 16px;
   padding: 24px;
-}
+} */
 
 .logo {
   height: 6em;
