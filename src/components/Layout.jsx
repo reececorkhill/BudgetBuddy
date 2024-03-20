@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import Message from './Message.jsx';
+import AddTransaction from './AddTransaction.jsx';
+import Transactions from './Transactions.jsx';
+import Balance from './Balance.jsx';
+import Income from './Income.jsx';
+import Expenses from './Expenses.jsx';
+import Buttons from './Buttons.jsx';
 import {
     MenuFoldOutlined,
     WalletOutlined,
-   InteractionOutlined,
+    InteractionOutlined,
     FullscreenOutlined,
     FullscreenExitOutlined,
     BookOutlined,
@@ -82,7 +90,25 @@ const App = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                    <div className="Buttons-section" data-testid="cypress-interface-section">
+                        <Buttons />
+                    </div>
+
+                    <div className="welcome-section" data-testid="cypress-welcome-section">
+                        <Message /> {/* This is the welcome message. */}
+                    </div>
+
+                    <Balance />
+                    <Income />
+                    <Expenses />
+
+                    <div className="transactions-section" data-testid="cypress-transaction-section">
+                        <Transactions /> {/* This component displays list of added transactions. */}
+                    </div>
+
+                    <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
+                        <AddTransaction /> {/*This component allows the user to add a transaction. */}
+                    </div>
 
                 </Content>
             </Layout>

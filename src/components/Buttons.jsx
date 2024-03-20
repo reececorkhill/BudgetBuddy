@@ -18,7 +18,8 @@ const App = () => {
     return (
         <>
             <FloatButton.Group
-                open={open}
+                onChange={onChange}
+                checked={open}
                 trigger="click"
                 style={{
                     right: 24,
@@ -29,13 +30,7 @@ const App = () => {
                 <FloatButton icon={<UserAddOutlined />} />
                 <FloatButton icon={<PoundCircleOutlined />} />
             </FloatButton.Group>
-            <Switch
-                onChange={onChange}
-                checked={open}
-                style={{
-                    margin: 16,
-                }}
-            />
+           
         </>
 
 
