@@ -101,6 +101,18 @@ const App = () => {
 
                     <div>
                         <Row gutter={16}>
+                            <Col span={24}>
+                                One of two columns
+                                <Message /> {/* This is the welcome message. */}
+                            </Col>
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                One of two columns
+                                <Balance/> 
+                            </Col>
+                        </Row>
+                        <Row gutter={16}>
                             <Col span={12}>
                                 One of two columns
                                 <Income/>
@@ -110,27 +122,24 @@ const App = () => {
                                 <Expenses/>
                             </Col>
                         </Row>
+                        <Row gutter={16}>
+                            <Col span={24}>
+                                One of two columns
+                                <Transactions/> {/* This component displays list of added transactions. */}
+                            </Col>
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={24}>
+                                One of two columns
+                                <AddTransaction/> {/*This component allows the user to add a transaction. */}
+                            </Col>
+                        </Row>
                     </div>
 
                     <div className="Buttons-section" data-testid="cypress-interface-section">
                         <Buttons/>
                     </div>
 
-                    <div className="welcome-section" data-testid="cypress-welcome-section">
-                        <Message/> {/* This is the welcome message. */}
-                    </div>
-
-                    <Balance/>
-                    <Income/>
-                    <Expenses/>
-
-                    <div className="transactions-section" data-testid="cypress-transaction-section">
-                        <Transactions/> {/* This component displays list of added transactions. */}
-                    </div>
-
-                    <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
-                        <AddTransaction/> {/*This component allows the user to add a transaction. */}
-                    </div>
 
                 </Content>
             </Layout>
