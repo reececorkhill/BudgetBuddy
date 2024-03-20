@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Message from './Message.jsx';
 import AddTransaction from './AddTransaction.jsx';
@@ -8,7 +8,6 @@ import Income from './Income.jsx';
 import Expenses from './Expenses.jsx';
 import Buttons from './Buttons.jsx';
 import {
-    MenuFoldOutlined,
     WalletOutlined,
     InteractionOutlined,
     FullscreenOutlined,
