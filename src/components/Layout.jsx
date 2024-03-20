@@ -14,7 +14,7 @@ import {
     FullscreenOutlined,
     FullscreenExitOutlined,
     BookOutlined,
-    UserOutlined,
+    HomeOutlined,
     BarChartOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
@@ -37,8 +37,8 @@ const App = () => {
                     items={[
                         {
                             key: '1',
-                            icon: <UserOutlined />,
-                            label: 'Profile',
+                            icon: <HomeOutlined />,
+                            label: 'Home',
                         },
                         {
                             key: '2',
