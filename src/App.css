@@ -42,7 +42,14 @@
 .read-the-docs {
   color: #888;
 }
+/* .demo-logo-vertical {
+  height:100%;
+} */
 
-.myBtn {
-  background-color: blueviolet;
+.demo-logo-vertical items {
+  flex-direction: row;
+}
+
+.main-container {
+  width: 100%;
 }

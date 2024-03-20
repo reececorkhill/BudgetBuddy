@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { PoundCircleOutlined, UserAddOutlined, PlusCircleOutlined } from '@ant-design/icons';
-
+import {
+    PoundCircleOutlined, UserAddOutlined, PlusCircleOutlined, MenuFoldOutlined,
+    MenuUnfoldOutlined,
+    UploadOutlined,
+    UserOutlined,
+    VideoCameraOutlined,
+} from '@ant-design/icons';
+import { Layout, Menu, Button, theme } from 'antd';
 import { FloatButton, Switch } from 'antd';
 
-
-const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
-};
 
 const App = () => {
     const [open, setOpen] = useState(true);
@@ -16,7 +18,8 @@ const App = () => {
     return (
         <>
             <FloatButton.Group
-                open={open}
+                onChange={onChange}
+                checked={open}
                 trigger="click"
                 style={{
                     right: 24,
@@ -27,17 +30,15 @@ const App = () => {
                 <FloatButton icon={<UserAddOutlined />} />
                 <FloatButton icon={<PoundCircleOutlined />} />
             </FloatButton.Group>
-            <Switch
-                onChange={onChange}
-                checked={open}
-                style={{
-                    margin: 16,
-                }}
-            />
+           
         </>
+
+
     );
 
 };
+
+
 
 
 
