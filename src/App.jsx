@@ -7,11 +7,14 @@ import Interface from './components/Interface.jsx';
 import Balance from './components/Balance.jsx';
 import Income from './components/Income.jsx';
 import Expenses from './components/Expenses.jsx';
+import Layout from './components/Layout.jsx'
 
 function App() {
 
   return (
     <>
+
+      <Layout />
 
       <div className="Interface-section" data-testid="cypress-interface-section">
         <Interface />
