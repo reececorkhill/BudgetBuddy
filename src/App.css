@@ -1,8 +1,12 @@
 /* @import '~antd/dist/antd.css'; */
 
 #root {
-  width:45rem;
+  width:100rem;
   text-align: center;
+}
+
+body {
+background-color: #212529;
 }
 
 
@@ -53,7 +57,6 @@
 }
 
 .main-container {
-  width: 100%;
   background-color: aliceblue;
 }
 
@@ -76,3 +79,7 @@ width: 45rem;
 justify-content: center;
 
 }
+
+/* :where(.css-dev-only-do-not-override-1ae8k9u).ant-layout.ant-layout-has-sider >.ant-layout {
+  width: 0;
+} */

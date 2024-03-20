@@ -70,7 +70,7 @@ const App = () => {
                     style={{
                         padding: 0,
                         background: colorBgContainer,
-                        width:'45rem',
+                        width:'5rem',
                     }}
                 >
                     <Button
@@ -91,7 +91,7 @@ const App = () => {
                              margin: '24px 16px',
                              padding: 24,
                              minHeight: 280,
-                             width: '45rem',
+                             width: '95rem',
                              justifyContent: 'center',
                              background: colorBgContainer,
                              borderRadius: borderRadiusLG,
@@ -128,7 +128,7 @@ const App = () => {
                                 <Transactions/> {/* This component displays list of added transactions. */}
                             </Col>
                         </Row>
-                        <Row gutter={16}>
+                        <Row id="transaction-buttons" gutter={16}>
                             <Col span={24}>
                                 One of two columns
                                 <AddTransaction/> {/*This component allows the user to add a transaction. */}
