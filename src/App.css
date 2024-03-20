@@ -1,11 +1,20 @@
 /* @import '~antd/dist/antd.css'; */
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width:45rem;
   text-align: center;
 }
+
+
+
+/* .ant-layout-content {
+  display: flex;
+  width:45rem;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px 16px;
+  padding: 24px;
+} */
 
 .logo {
   height: 6em;
@@ -42,14 +51,28 @@
 .read-the-docs {
   color: #888;
 }
-/* .demo-logo-vertical {
-  height:100%;
-} */
-
-.demo-logo-vertical items {
-  flex-direction: row;
-}
 
 .main-container {
-  width: 100%;
+  width: 500px;
+  background-color: aliceblue;
+}
+
+.transaction-buttons {
+  width:45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.transaction-list {
+  width:45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-section {
+width: 45rem;
+justify-content: center;
+
 }
