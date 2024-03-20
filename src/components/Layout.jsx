@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
+    FullscreenOutlined,
+    FullscreenExitOutlined,
     BookOutlined,
     UserOutlined,
     BarChartOutlined,
@@ -51,7 +53,7 @@ const App = () => {
                 >
                     <Button
                         type="text"
-                        icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                        icon={collapsed ? <FullscreenOutlined /> : <FullscreenExitOutlined />}
                         onClick={() => setCollapsed(!collapsed)}
                         style={{
                             fontSize: '16px',
