@@ -16,7 +16,12 @@ For this project we will build an expense tracker known as Budget Buddy. This ap
 
 ## Installation
 
+
+
 ## Usage
+![![Screenshot 2024-03-20 184416](https://github.com/reececorkhill/BudgetBuddy/assets/146132836/ea4e1171-b48a-4e2b-8a53-f1adf103f220)
+(![Screenshot 2024-03-20 184416](https://github.com/reececorkhill/BudgetBuddy/assets/146132836/9d928dda-3903-427f-bb9a-ec7b939b6e3f)
+
 
 ## Link to Site
 
