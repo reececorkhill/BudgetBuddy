@@ -36,6 +36,8 @@ const AddTransaction = () => {
         let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || [];
     
         localStorage.setItem('transactionObject', JSON.stringify([...savedTransactions, transactionObject]));
+
+        location.reload();
     }
 
     return (
