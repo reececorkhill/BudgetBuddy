@@ -1,25 +1,44 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { VictoryPie } from 'victory'; // Import VictoryPie
 
 const Expenses = () => {
-
     let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || [];
-    let expenses = 0;
+    let expensesData = {}; // Object to store expenses categorized by type
 
+    // income categorising and calculating total
     for (var i = 0; i < savedTransactions.length; i++) {
         var transaction = savedTransactions[i];
-
         if (transaction.type === 'Expense') {
-            expenses += parseInt(transaction.amount);
+            if (expensesData[transaction.category]) {
+                expensesData[transaction.category] += parseInt(transaction.amount);
+            } else {
+                expensesData[transaction.category] = parseInt(transaction.amount);
+            }
         }
     }
 
+    // converts expenses into an array to sort into a pie chart
+    const data = Object.keys(expensesData).map(category => ({
+        x: category,
+        y: expensesData[category]
+    }));
+
+    const colorPalette = ["#FF5733", "#FFC300", "#DAF7A6", "#A0E7E5", "#B39DDB", "#FF5733", "#FFC300", "#DAF7A6", "#A0E7E5", "#B39DDB"];
+
     return (
         <>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '24rem' }}>
             <Card.Body>
                 <Card.Title>Expenses</Card.Title>
-                <Card.Text>£{expenses}</Card.Text>
+                {/* render piechart, with colour options and font size */}
+                <VictoryPie 
+                    data={data} 
+                    colorScale={colorPalette} 
+                    style={{ labels: { fontSize: 20} }}
+                />
+                {/* displaying total expenses */}
+                <Card.Text>Total Expenses: £{Object.values(expensesData).reduce((acc, val) => acc + val, 0)}</Card.Text>
             </Card.Body>
         </Card>
         </>
