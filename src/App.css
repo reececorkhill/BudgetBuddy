@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+body {
+background-color: #212529;
+}
+
 
 
 /* .ant-layout-content {
@@ -75,3 +79,7 @@ width: 45rem;
 justify-content: center;
 
 }
+
+/* :where(.css-dev-only-do-not-override-1ae8k9u).ant-layout.ant-layout-has-sider >.ant-layout {
+  width: 0;
+} */

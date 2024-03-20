@@ -25,7 +25,8 @@ const App = () => {
             >
                 <FloatButton />
                 <FloatButton icon={<UserAddOutlined />} />
-                <FloatButton icon={<PoundCircleOutlined />} />
+                <a href="#transaction-buttons">
+                <FloatButton icon={<PoundCircleOutlined />} /></a>
             </FloatButton.Group>
            
         </>
