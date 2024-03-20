@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {
     MenuFoldOutlined,
-    MenuUnfoldOutlined,
+    WalletOutlined,
+   InteractionOutlined,
     FullscreenOutlined,
     FullscreenExitOutlined,
     BookOutlined,
@@ -18,7 +19,7 @@ const App = () => {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
     return (
-        <Layout>
+        <Layout className="main-container">
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical" />
                 <Menu
@@ -30,6 +31,16 @@ const App = () => {
                             key: '1',
                             icon: <UserOutlined />,
                             label: 'Profile',
+                        },
+                        {
+                            key: '3',
+                            icon: <WalletOutlined />,
+                            label: 'Income',
+                        },
+                        {
+                            key: '3',
+                            icon: <InteractionOutlined />,
+                            label: 'Transactions',
                         },
                         {
                             key: '2',
@@ -62,7 +73,7 @@ const App = () => {
                         }}
                     />
                 </Header>
-                <Content
+                <Content className="content-main"
                     style={{
                         margin: '24px 16px',
                         padding: 24,
@@ -72,6 +83,7 @@ const App = () => {
                     }}
                 >
                     Content
+
                 </Content>
             </Layout>
         </Layout>
