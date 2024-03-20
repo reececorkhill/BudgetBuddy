@@ -21,7 +21,7 @@ import { Layout, Menu, Button, theme } from 'antd';
 
 const { Header, Sider, Content } = Layout;
 const App = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
@@ -69,6 +69,7 @@ const App = () => {
                     style={{
                         padding: 0,
                         background: colorBgContainer,
+                        width:'45rem',
                     }}
                 >
                     <Button
@@ -87,6 +88,8 @@ const App = () => {
                         margin: '24px 16px',
                         padding: 24,
                         minHeight: 280,
+                        width: '45rem',
+                        justifyContent: 'center',
                         background: colorBgContainer,
                         borderRadius: borderRadiusLG,
                     }}

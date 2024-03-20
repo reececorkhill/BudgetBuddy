@@ -16,7 +16,7 @@ const Balance = () => {
 
     return (
         <>
-        <Card style={{ width: '24rem' }}>
+        <Card style={{ width: '45rem' }}>
             <Card.Body>
                 <Card.Title>Balance</Card.Title>
                 {/* displays calculated balance */}
