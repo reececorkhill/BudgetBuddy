@@ -3,7 +3,7 @@
 * [Description of the assignment](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Link to the Site]()
+* [Link to the Site](https://deploy-preview-39--lucent-bonbon-7b187a.netlify.app/)
 * [Credits](#credits)
 * [License](#license)
 
@@ -16,11 +16,15 @@ For this project we will build an expense tracker known as Budget Buddy. This ap
 
 ## Installation
 
+
+
 ## Usage
 
 ## Link to Site
 
-This site can be accessed on GitPages [HERE]()
+[https://deploy-preview-39--lucent-bonbon-7b187a.netlify.app/](https://deploy-preview-39--lucent-bonbon-7b187a.netlify.app/) 
+
+This site can be accessed on GitPages [https://github.com/reececorkhill/BudgetBuddy/edit/main/README.md](https://github.com/reececorkhill/BudgetBuddy/edit/main/README.md)
 
 ## Credits
 
