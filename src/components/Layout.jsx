@@ -28,39 +28,41 @@ const App = () => {
     return (
         <Layout className="main-container">
             <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="demo-logo-vertical" />
-                <Menu
-                    theme="dark"
-                    mode="inline"
-                    defaultSelectedKeys={['1']}
-                    items={[
-                        {
-                            key: '1',
-                            icon: <HomeOutlined />,
-                            label: 'Home',
-                        },
-                        {
-                            key: '2',
-                            icon: <WalletOutlined />,
-                            label: 'Income',
-                        },
-                        {
-                            key: '3',
-                            icon: <InteractionOutlined />,
-                            label: 'Transactions',
-                        },
-                        {
-                            key: '4',
-                            icon: <BarChartOutlined />,
-                            label: 'Graph',
-                        },
-                        {
-                            key: '5',
-                            icon: <BookOutlined />,
-                            label: 'Recommendations',
-                        },
-                    ]}
-                />
+                <div className="demo-logo-vertical" data-testid="cypress-menu">
+                    <Menu
+                        theme="dark"
+                        mode="inline"
+                        defaultSelectedKeys={['1']}
+                        items={[
+                            {
+                                key: '1',
+                                icon: <HomeOutlined />,
+                                label: 'Home',
+                            },
+                            {
+                                key: '2',
+                                icon: <WalletOutlined />,
+                                label: 'Income',
+                            },
+                            {
+                                key: '3',
+                                icon: <InteractionOutlined />,
+                                label: 'Transactions',
+                            },
+                            {
+                                key: '4',
+                                icon: <BarChartOutlined />,
+                                label: 'Graph',
+                            },
+                            {
+                                key: '5',
+                                icon: <BookOutlined />,
+                                label: 'Recommendations',
+                            },
+                        ]}
+                    />
+                </div>
+
             </Sider>
             <Layout>
                 <Header
