@@ -33,7 +33,7 @@ const App = () => {
                             label: 'Profile',
                         },
                         {
-                            key: '3',
+                            key: '2',
                             icon: <WalletOutlined />,
                             label: 'Income',
                         },
@@ -43,12 +43,12 @@ const App = () => {
                             label: 'Transactions',
                         },
                         {
-                            key: '2',
+                            key: '4',
                             icon: <BarChartOutlined />,
                             label: 'Graph',
                         },
                         {
-                            key: '3',
+                            key: '5',
                             icon: <BookOutlined />,
                             label: 'Recommendations',
                         },
