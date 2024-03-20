@@ -42,8 +42,8 @@ const AddTransaction = () => {
 
     return (
         <>
-            <div>
-                <InputGroup>
+            <div className="transaction-buttons">
+                <InputGroup >
                     <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Expense")}>Expense</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Expense". */}
