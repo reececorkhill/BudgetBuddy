@@ -7,6 +7,7 @@ import Balance from './Balance.jsx';
 import Income from './Income.jsx';
 import Expenses from './Expenses.jsx';
 import Buttons from './Buttons.jsx';
+import { Row, Col } from 'antd';
 import {
     WalletOutlined,
     InteractionOutlined,
@@ -83,35 +84,52 @@ const App = () => {
                         }}
                     />
                 </Header>
+
+
                 <Content className="content-main"
-                    style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                        width: '45rem',
-                        justifyContent: 'center',
-                        background: colorBgContainer,
-                        borderRadius: borderRadiusLG,
-                    }}
+                         style={{
+                             margin: '24px 16px',
+                             padding: 24,
+                             minHeight: 280,
+                             width: '45rem',
+                             justifyContent: 'center',
+                             background: colorBgContainer,
+                             borderRadius: borderRadiusLG,
+                         }}
                 >
+
+
+                    <div>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                One of two columns
+                                <Income/>
+                            </Col>
+                            <Col span={12}>
+                                One of two columns
+                                <Expenses/>
+                            </Col>
+                        </Row>
+                    </div>
+
                     <div className="Buttons-section" data-testid="cypress-interface-section">
-                        <Buttons />
+                        <Buttons/>
                     </div>
 
                     <div className="welcome-section" data-testid="cypress-welcome-section">
-                        <Message /> {/* This is the welcome message. */}
+                        <Message/> {/* This is the welcome message. */}
                     </div>
 
-                    <Balance />
-                    <Income />
-                    <Expenses />
+                    <Balance/>
+                    <Income/>
+                    <Expenses/>
 
                     <div className="transactions-section" data-testid="cypress-transaction-section">
-                        <Transactions /> {/* This component displays list of added transactions. */}
+                        <Transactions/> {/* This component displays list of added transactions. */}
                     </div>
 
                     <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
-                        <AddTransaction /> {/*This component allows the user to add a transaction. */}
+                        <AddTransaction/> {/*This component allows the user to add a transaction. */}
                     </div>
 
                 </Content>
