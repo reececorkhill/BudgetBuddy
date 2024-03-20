@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Message from './Message.jsx';
 import AddTransaction from './AddTransaction.jsx';
@@ -7,8 +7,8 @@ import Balance from './Balance.jsx';
 import Income from './Income.jsx';
 import Expenses from './Expenses.jsx';
 import Buttons from './Buttons.jsx';
+import { Row, Col } from 'antd';
 import {
-    MenuFoldOutlined,
     WalletOutlined,
     InteractionOutlined,
     FullscreenOutlined,
@@ -29,39 +29,41 @@ const App = () => {
     return (
         <Layout className="main-container">
             <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="demo-logo-vertical" />
-                <Menu
-                    theme="dark"
-                    mode="inline"
-                    defaultSelectedKeys={['1']}
-                    items={[
-                        {
-                            key: '1',
-                            icon: <HomeOutlined />,
-                            label: 'Home',
-                        },
-                        {
-                            key: '2',
-                            icon: <WalletOutlined />,
-                            label: 'Income',
-                        },
-                        {
-                            key: '3',
-                            icon: <InteractionOutlined />,
-                            label: 'Transactions',
-                        },
-                        {
-                            key: '4',
-                            icon: <BarChartOutlined />,
-                            label: 'Graph',
-                        },
-                        {
-                            key: '5',
-                            icon: <BookOutlined />,
-                            label: 'Recommendations',
-                        },
-                    ]}
-                />
+                <div className="demo-logo-vertical" data-testid="cypress-menu">
+                    <Menu
+                        theme="dark"
+                        mode="inline"
+                        defaultSelectedKeys={['1']}
+                        items={[
+                            {
+                                key: '1',
+                                icon: <HomeOutlined />,
+                                label: 'Home',
+                            },
+                            {
+                                key: '2',
+                                icon: <WalletOutlined />,
+                                label: 'Income',
+                            },
+                            {
+                                key: '3',
+                                icon: <InteractionOutlined />,
+                                label: 'Transactions',
+                            },
+                            {
+                                key: '4',
+                                icon: <BarChartOutlined />,
+                                label: 'Graph',
+                            },
+                            {
+                                key: '5',
+                                icon: <BookOutlined />,
+                                label: 'Recommendations',
+                            },
+                        ]}
+                    />
+                </div>
+
             </Sider>
             <Layout>
                 <Header
@@ -82,35 +84,52 @@ const App = () => {
                         }}
                     />
                 </Header>
+
+
                 <Content className="content-main"
-                    style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                        width: '45rem',
-                        justifyContent: 'center',
-                        background: colorBgContainer,
-                        borderRadius: borderRadiusLG,
-                    }}
+                         style={{
+                             margin: '24px 16px',
+                             padding: 24,
+                             minHeight: 280,
+                             width: '45rem',
+                             justifyContent: 'center',
+                             background: colorBgContainer,
+                             borderRadius: borderRadiusLG,
+                         }}
                 >
+
+
+                    <div>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                One of two columns
+                                <Income/>
+                            </Col>
+                            <Col span={12}>
+                                One of two columns
+                                <Expenses/>
+                            </Col>
+                        </Row>
+                    </div>
+
                     <div className="Buttons-section" data-testid="cypress-interface-section">
-                        <Buttons />
+                        <Buttons/>
                     </div>
 
                     <div className="welcome-section" data-testid="cypress-welcome-section">
-                        <Message /> {/* This is the welcome message. */}
+                        <Message/> {/* This is the welcome message. */}
                     </div>
 
-                    <Balance />
-                    <Income />
-                    <Expenses />
+                    <Balance/>
+                    <Income/>
+                    <Expenses/>
 
                     <div className="transactions-section" data-testid="cypress-transaction-section">
-                        <Transactions /> {/* This component displays list of added transactions. */}
+                        <Transactions/> {/* This component displays list of added transactions. */}
                     </div>
 
                     <div className="add-transaction-section" data-testid="cypress-add-transaction-section">
-                        <AddTransaction /> {/*This component allows the user to add a transaction. */}
+                        <AddTransaction/> {/*This component allows the user to add a transaction. */}
                     </div>
 
                 </Content>

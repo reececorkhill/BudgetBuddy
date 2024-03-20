@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
-    PoundCircleOutlined, UserAddOutlined, PlusCircleOutlined, MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
+    PoundCircleOutlined,
+    UserAddOutlined,
+    PlusCircleOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, theme } from 'antd';
-import { FloatButton, Switch } from 'antd';
+import { FloatButton } from 'antd';
 
 
 const App = () => {
