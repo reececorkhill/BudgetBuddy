@@ -42,7 +42,8 @@ const AddTransaction = () => {
 
     return (
         <>
-            <div className="transaction-buttons" data-testid="cypress-add-transaction">
+            <div className="transaction-buttons" data-testid="cypress-add-transaction" style={{ width: '99.5%' }}>
+
                 <InputGroup >
                     <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
@@ -62,7 +63,7 @@ const AddTransaction = () => {
                         <Dropdown.Item href="#" onClick={() => setTransactionCategory("Other")}>Other</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Other". */}
                     </DropdownButton>
                 </InputGroup>
-                <div className="d-grid gap-2">
+                <div className="d-grid gap-2"style={{marginTop:'20px' }}>
                     <Button variant="primary" size="lg" onClick={addTransaction}>Add Transaction</Button> {/* Button will have onClick event handler which will call a function to save to localstorage. */}
                 </div>
             </div>
