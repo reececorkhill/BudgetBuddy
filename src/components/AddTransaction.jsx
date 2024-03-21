@@ -42,7 +42,7 @@ const AddTransaction = () => {
 
     return (
         <>
-            <div className="transaction-buttons">
+            <div className="transaction-buttons" data-testid="cypress-add-transaction">
                 <InputGroup >
                     <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
                         <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
