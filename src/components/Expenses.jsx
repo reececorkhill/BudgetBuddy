@@ -27,7 +27,7 @@ const Expenses = () => {
 
     return (
         <>
-            <Card data-testid="cypress-expenses" style={{ width: '45rem', marginBottom:'20px' }}>
+            <Card data-testid="cypress-expenses" style={{ width: '25rem', marginBottom:'20px' }}>
                 <Card.Body>
                     <Card.Title>Expenses</Card.Title>
                     {/* render piechart, with colour options and font size */}
