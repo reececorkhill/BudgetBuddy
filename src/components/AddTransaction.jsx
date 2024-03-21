@@ -1,74 +1,77 @@
-import { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-
-const AddTransaction = () => {
-
-    // Initial state of the Type dropdown button.
-    const [transactionType, setTransactionType] = useState("Type")
-
-    // Initial state of the Category dropdown button.
-    const [transactionCategory, setTransactionCategory] = useState("Category") 
-
-    // Initial state of Transaction Name (Empty String) - this may not be needed...
-    // const [transactionName, setTransactionName] = useState("");
-
-    // Initial state of Transaction Amount (Number 0).
-    const [transactionAmount, setTransactionAmount] = useState("Enter Amount");
-
-    // Function to handle the transaction amount input box change.
-    const handleTransactionChange = (e) => {
-        setTransactionAmount(e.target.value)
+class AddTransaction extends React.Component {
+    constructor(props) {
+        super(props);
+        // Set the default transactionType to "Income"
+        this.state = {
+            transactionType: "Income", // Default to "Income"
+            transactionCategory: "Select Category",
+            transactionAmount: "" // Empty string makes more sense for an input field
+        };
     }
 
-    const transactionObject = {
-        type: transactionType,
-        category: transactionCategory,
-        amount: transactionAmount
-    };
-    
-    // Function which will handle the Add Transaction button click.
-    const addTransaction = () => {
+    handleTransactionChange = (e) => {
+        this.setState({ transactionAmount: e.target.value });
+    }
+
+    addTransaction = () => {
+        const { transactionType, transactionCategory, transactionAmount } = this.state;
+        const transactionObject = { type: transactionType, category: transactionCategory, amount: transactionAmount };
+
         let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || [];
-    
         localStorage.setItem('transactionObject', JSON.stringify([...savedTransactions, transactionObject]));
-
-        location.reload();
+        // Consider using state management for UI updates instead of reloading the page
+        window.location.reload();
     }
 
-    return (
-        <>
-            <div className="transaction-buttons" data-testid="cypress-add-transaction" style={{ width: '99.5%' }}>
+    renderCategoryOptions = () => {
+        const incomeCategories = ["Salary", "Bonus", "Refund", "Cheque"];
+        const expenseCategories = ["Saving", "Food", "Debt", "Holiday", "Other"];
 
-                <InputGroup >
-                    <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
-                        <Dropdown.Item href="#" onClick={() => setTransactionType("Income")}>Income</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Income". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionType("Expense")}>Expense</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Expense". */}
-                    </DropdownButton>
-                    <Form.Control placeholder={transactionAmount} onChange={handleTransactionChange} type="number"/>
-                    <DropdownButton variant="outline-secondary" title={transactionCategory} id="input-group-dropdown-4" align="end">
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Salary")}>Salary</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Salary". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Bonus")}>Bonus</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Bonus". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Refund")}>Refund</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Refund". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Cheque")}>Cheque</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Cheque". */}
-                        <Dropdown.Divider />
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Saving")}>Saving</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Saving". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Food")}>Food</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Food". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Debt")}>Debt</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Debt". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Holiday")}>Holiday</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Holiday". */}
-                        <Dropdown.Item href="#" onClick={() => setTransactionCategory("Other")}>Other</Dropdown.Item> {/* Dropdown item which, if clicked will update it's state and display "Other". */}
-                    </DropdownButton>
-                </InputGroup>
-                <div className="d-grid gap-2"style={{marginTop:'20px' }}>
-                    <Button variant="primary" size="lg" onClick={addTransaction}>Add Transaction</Button> {/* Button will have onClick event handler which will call a function to save to localstorage. */}
+        const { transactionType } = this.state;
+        const categories = transactionType === "Income" ? incomeCategories : expenseCategories;
+
+        return categories.map((category, index) => (
+            <Dropdown.Item key={index} href="#" onClick={() => this.setState({ transactionCategory: category })}>
+                {category}
+            </Dropdown.Item>
+        ));
+    }
+
+    render() {
+        const { transactionType, transactionCategory, transactionAmount } = this.state;
+        return (
+            <>
+                <div className="transaction-buttons" data-testid="cypress-add-transaction" style={{ width: '99.5%' }}>
+                    <InputGroup>
+                        <DropdownButton variant="outline-secondary" title={transactionType} id="input-group-dropdown-3">
+                            <Dropdown.Item href="#" onClick={() => this.setState({ transactionType: "Income", transactionCategory: "Select Category" })}>Income</Dropdown.Item>
+                            <Dropdown.Item href="#" onClick={() => this.setState({ transactionType: "Expense", transactionCategory: "Select Category" })}>Expense</Dropdown.Item>
+                        </DropdownButton>
+                        <Form.Control
+                            value={transactionAmount}
+                            placeholder="Enter Amount"
+                            onChange={this.handleTransactionChange}
+                            type="number"
+                            style={{ textAlign: 'right' }} // Add this line to align text to the right
+                        />
+                        <DropdownButton variant="outline-secondary" title={transactionCategory} id="input-group-dropdown-4" alignRight>
+                            {this.renderCategoryOptions()}
+                        </DropdownButton>
+                    </InputGroup>
+                    <div className="d-grid gap-2" style={{ marginTop: '20px' }}>
+                        <Button variant="primary" size="lg" onClick={this.addTransaction}>Add Transaction</Button>
+                    </div>
                 </div>
-            </div>
-        </> 
-    );
+            </>
+        );
+    }
 }
 
 export default AddTransaction;
