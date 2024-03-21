@@ -91,7 +91,7 @@ const App = () => {
                              margin: '24px 16px',
                              padding: 24,
                              minHeight: 280,
-                             width: '55rem',
+                             width: '95rem',
                              justifyContent: 'center',
                              background: colorBgContainer,
                              borderRadius: borderRadiusLG,
@@ -109,7 +109,7 @@ const App = () => {
                         <Row gutter={16}>
                             <Col span={24}>
                                 
-                                <Balance/> 
+                                <Balance /> 
                             </Col>
                         </Row>
                         <Row gutter={20}>

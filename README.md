@@ -47,10 +47,21 @@ npm run dev
 3. Enjoy and don't hesitate to contact us!
 
 ## Screenshots
-![Screenshot 1](src/Images/bb_1.png)
-![Screenshot 2](src/Images/bb_2.png)
-![Screenshot 3](src/Images/bb_3.png)
-![Screenshot 4](src/Images/bb_4.png)
+#### Site with no data input:
+![Screenshot 1](src/Images/no_data1.png)
+
+#### Add Income:
+![Screenshot 2](src/Images/add_income1.png)
+
+#### Add Expense:
+![Screenshot 3](src/Images/add_expense.png)
+
+#### View Transactions:
+![Screenshot 4](src/Images/view_transaction.png)
+
+#### Check Balance:
+![Screenshot 4](src/Images/display_balance.png)
+
 
 
 ## License

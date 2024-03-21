@@ -27,14 +27,14 @@ const Expenses = () => {
 
     return (
         <>
-            <Card data-testid="cypress-expenses" style={{ width: '25rem', marginBottom:'20px' }}>
+            <Card data-testid="cypress-expenses" style={{ width: '45rem', marginBottom:'20px' }}>
                 <Card.Body>
                     <Card.Title>Expenses</Card.Title>
                     {/* render piechart, with colour options and font size */}
                     <VictoryPie
                         data={data}
                         colorScale={colorPalette}
-                        style={{ labels: { fontSize: 20} }}
+                        style={{ labels: { fontSize: 10} }}
                     />
                     {/* displaying total expenses */}
                     <Card.Text>Total Expenses: £{Object.values(expensesData).reduce((acc, val) => acc + val, 0)}</Card.Text>
