@@ -47,11 +47,11 @@ npm run dev
 3. Enjoy and don't hesitate to contact us!
 
 ## Screenshots
-![Screenshot of Home Component](https://github.com/reececorkhill/React-Portfolio/assets/151788819/8680a286-8f21-4d7d-a58b-fe7fcf5bf986)
-![Screenshot of About Component](https://github.com/reececorkhill/React-Portfolio/assets/151788819/1fe7fc81-b550-45d5-8c72-2e7145b32dd1)
-![Screenshot of Project Gallery Component](https://github.com/reececorkhill/React-Portfolio/assets/151788819/70ea3eeb-5c6e-44d8-a047-eeffd7e6809b)
-![Screenshot of Resume Component](https://github.com/reececorkhill/React-Portfolio/assets/151788819/32865078-1029-4aab-9226-b2601b5db106)
-![Screenshot of Contact Component](https://github.com/reececorkhill/React-Portfolio/assets/151788819/709a918f-3802-4f10-bdd5-95bed2946838)
+![Screenshot 1](src/Images/bb_1.png)
+![Screenshot 2](src/Images/bb_2.png)
+![Screenshot 3](src/Images/bb_3.png)
+![Screenshot 4](src/Images/bb_4.png)
+
 
 ## License
 

@@ -5,7 +5,8 @@ const Transactions = () => {
     let savedTransactions = JSON.parse(localStorage.getItem('transactionObject')) || []; // fetching data from localstorage
 
     return (
-        <div className="transaction-list">
+        <div className="transaction-list" style={{ width: '99.5%',
+        marginBottom:'20px' }}>
             <ListGroup as="ol" numbered>
                 {savedTransactions.map((data, index) => (
                     <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start" key={index}>
