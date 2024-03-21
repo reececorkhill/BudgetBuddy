@@ -27,19 +27,19 @@ const Income = () => {
 
     return (
         <>
-        <Card style={{ width: '45rem', marginBottom:'20px' }}>
-            <Card.Body>
-                <Card.Title>Income</Card.Title>
-                {/* render piechart, with colour options and font size */}
-                <VictoryPie 
-                    data={data} 
-                    colorScale={colorPalette} 
-                    style={{ labels: { fontSize: 10 } }}
-                />
-                {/* displaying total income */}
-                <Card.Text>Total Income: £{Object.values(incomeData).reduce((acc, val) => acc + val, 0)}</Card.Text>
-            </Card.Body>
-        </Card>
+            <Card data-testid="cypress-income" style={{ width: '25rem', marginBottom:'20px' }}>
+                <Card.Body>
+                    <Card.Title>Income</Card.Title>
+                    {/* render piechart, with colour options and font size */}
+                    <VictoryPie
+                        data={data}
+                        colorScale={colorPalette}
+                        style={{ labels: { fontSize: 20 } }}
+                    />
+                    {/* displaying total income */}
+                    <Card.Text>Total Income: £{Object.values(incomeData).reduce((acc, val) => acc + val, 0)}</Card.Text>
+                </Card.Body>
+            </Card>
         </>
     );
 }

@@ -16,14 +16,14 @@ const Balance = () => {
 
     return (
         <>
-        <Card style={{ width: '99.5%',
-    marginBottom:'20px' }}>
-            <Card.Body>
-                <Card.Title>Balance</Card.Title>
-                {/* displays calculated balance */}
-                <Card.Text>£{balance}</Card.Text>
-            </Card.Body>
-        </Card>
+
+            <Card data-testid="cypress-balance" style={{ width: '99.5%', marginBottom:'20px' }}>
+                <Card.Body>
+                    <Card.Title>Balance</Card.Title>
+                    {/* displays calculated balance */}
+                    <Card.Text>£{balance}</Card.Text>
+                </Card.Body>
+            </Card>
         </>
     );
 }
