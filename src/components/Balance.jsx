@@ -16,7 +16,7 @@ const Balance = () => {
 
     return (
         <>
-        <Card style={{ width: '45rem' }}>
+        <Card data-testid="cypress-balance" style={{ width: '45rem' }}>
             <Card.Body>
                 <Card.Title>Balance</Card.Title>
                 {/* displays calculated balance */}
