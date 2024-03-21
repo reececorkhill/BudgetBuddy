@@ -27,7 +27,7 @@ const Expenses = () => {
 
     return (
         <>
-        <Card style={{ width: '45rem' }}>
+        <Card style={{ width: '45rem', marginBottom:'20px' }}>
             <Card.Body>
                 <Card.Title>Expenses</Card.Title>
                 {/* render piechart, with colour options and font size */}
