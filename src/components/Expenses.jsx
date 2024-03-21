@@ -34,7 +34,7 @@ const Expenses = () => {
                     <VictoryPie
                         data={data}
                         colorScale={colorPalette}
-                        style={{ labels: { fontSize: 10} }}
+                        style={{ labels: { fontSize: 20} }}
                     />
                     {/* displaying total expenses */}
                     <Card.Text>Total Expenses: £{Object.values(expensesData).reduce((acc, val) => acc + val, 0)}</Card.Text>
